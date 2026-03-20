@@ -200,3 +200,41 @@ Real-time disruption alerts for workers
 
 Project Goal
 To build a simple, automated insurance system that protects gig delivery workers from sudden income loss, improving financial stability and resilience for the gig economy.
+
+
+## 🔐 Adversarial Defense & Anti-Spoofing Strategy
+
+### 1. Differentiation  
+Our system does not rely only on GPS.  
+We use a multi-check approach to verify if the delivery partner is genuinely present in the affected location.
+
+- Movement Check: Using phone sensors to confirm real activity  
+- Network Check: Matching GPS location with IP/network data  
+- Weather Validation: Verifying real-time weather conditions  
+
+This helps differentiate real users from spoofed ones.
+
+---
+
+### 2. Data Used  
+We analyze multiple data points:
+
+- GPS location  
+- Device movement (accelerometer/step count)  
+- Network/IP location  
+- Time-based activity patterns  
+- Weather API data  
+
+We also detect patterns where multiple users behave identically, indicating possible fraud groups.
+
+---
+
+### 3. UX Balance  
+We ensure genuine users are not affected:
+
+- Low-risk claims → auto-approved  
+- Medium-risk → request additional proof  
+- High-risk → manual review  
+
+If flagged, users can submit photo/video proof.  
+This ensures fairness while preventing fraud.
